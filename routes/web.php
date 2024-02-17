@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClienteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[ClienteController::class,'showhome']);
+Route::get('/cadastro-cliente',[ClienteController::class,'showFormularioCadastro']);
+Route::get('/formulario-funcionario',[FuncionarioController::class,'formulariofuncionario']);

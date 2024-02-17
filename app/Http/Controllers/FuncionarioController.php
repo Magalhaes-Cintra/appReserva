@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ClienteController extends Controller
+class FuncionarioController extends Controller
 {
     public function showhome(){
         return view("home");
@@ -12,5 +12,9 @@ class ClienteController extends Controller
 
     public function showFormularioCadastro(Request $request){
         return view("formulariocadastroCliente");
+    }
+
+    public function showFuncionario(){
+        return view("formulariofuncionario");
     }
 }
